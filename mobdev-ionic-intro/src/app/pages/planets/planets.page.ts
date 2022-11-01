@@ -16,10 +16,11 @@ export class PlanetsPage implements OnInit {
 
   ngOnInit() {
     this.planets = this.http.get('https://swapi.dev/api/planets');
-    this.planets.subscribe(data => {
-      console.log('my data: ', data);
-      
-});
+   
   }
-
+  openDetails(planets) {
+    let split = planets.url.split('/');
+    let planetsId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/films/${planetsId}`);
+    }
 }

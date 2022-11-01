@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
+ion-header>
+  <ion-toolbar color="primary">
     <ion-title>people</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item button detail lines="@inset" *ngFor="let people of (people | async)?.results" (click)="openDetails(people)">	
+      {{ people.title }}</ion-item>
+  </ion-list>
 </ion-content>

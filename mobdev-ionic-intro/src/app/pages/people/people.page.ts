@@ -15,12 +15,14 @@ export class PeoplePage implements OnInit {
 
   ngOnInit() {
     this.people = this.http.get('https://swapi.dev/api/people');
-    this.people.subscribe(data => {
-      console.log('my data: ', data);
-      
-});
-
+    
+}
+openDetails(people) {
+  let split = people.url.split('/');
+  let peopleId = split[split.length-2];
+  this.router.navigateByUrl(`/tabs/people/${peopleId}`);
+  }
 
   }
   
-}
+
