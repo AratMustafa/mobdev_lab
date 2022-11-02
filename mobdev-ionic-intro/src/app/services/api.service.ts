@@ -22,5 +22,12 @@ export class ApiService {
   getPerson(id){
     return this.http.get(`https://swapi.dev/api/people/${id}`);
   }
+  getPlanets(){
+    return this.http.get('https://swapi.dev/api/planets');
+  }
+
+  getPlanet(id){
+    return this.http.get(`https://swapi.dev/api/planets/${id}`);
+  }
 
 }
