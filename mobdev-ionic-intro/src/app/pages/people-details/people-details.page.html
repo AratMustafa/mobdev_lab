@@ -1,10 +1,17 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start" defaulthref="/tabs/people">
+    <ion-buttons slot="start" defaulthref="/tabs/(people:people)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-
-    <ion-title> {{ person?.name }}</ion-title>
+    <ion-title>{{ people?.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
