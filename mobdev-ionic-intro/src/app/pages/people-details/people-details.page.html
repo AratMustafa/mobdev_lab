@@ -3,7 +3,7 @@
     <ion-buttons slot="start" defaulthref="/tabs/(people:people)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ people?.name }}</ion-title>
+    <ion-title>{{ person?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -18,15 +18,19 @@
 <ion-content>
   <ion-card *ngIf="person">
     <ion-card-content>
+      <ion-icon name="people-sharp"></ion-icon>
       Name : {{ person.name  }}
     </ion-card-content>
     <ion-card-content>
+      <ion-icon name="send-sharp"></ion-icon>
       Birth_year : {{ person.birth_year  }}
           </ion-card-content>
           <ion-card-content>
+            <ion-icon name="send-sharp"></ion-icon>
             Height: {{ person.height }}
                 </ion-card-content>  
                 <ion-card-content>
+                  <ion-icon name="send-sharp"></ion-icon>
                   Eye_color : {{ person.eye_color  }}
                       </ion-card-content>  
   </ion-card>
