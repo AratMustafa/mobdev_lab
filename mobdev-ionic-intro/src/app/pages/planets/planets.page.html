@@ -7,6 +7,6 @@
 <ion-content>
   <ion-list>
     <ion-item button detail lines="@inset" *ngFor="let planets of (planets | async)?.results" (click)="openDetails(planets)">	
-      {{ planets.title }}</ion-item>
+      {{ planets.name }}</ion-item>
   </ion-list>
 </ion-content>

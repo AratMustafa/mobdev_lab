@@ -7,6 +7,6 @@
 <ion-content>
   <ion-list>
     <ion-item button detail lines="@inset" *ngFor="let people of (people | async)?.results" (click)="openDetails(people)">	
-      {{ people.title }}</ion-item>
+      {{ people.name }}</ion-item>
   </ion-list>
 </ion-content>
